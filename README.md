@@ -14,7 +14,7 @@ Por enquanto, o site está em desenvolvimento. Assim que possível, vamos hosped
 - Clone seu fork, com `git clone <url do fork>`
 - Faça suas alterações, recomendamos o editor *Atom* pra isso.
 - Salve-as no Github, com `git add *` e `git commit -m <descrição do que você fez>`
-- **Revise seu código**
+- **Revise seu código!**
 - Abra uma pull request e aguarde a análise
 
 ### Regras:

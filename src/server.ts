@@ -3,7 +3,6 @@ module.exports = () => {
 	const express = require('express');
 	const handlebars = require('express-handlebars');
 	const cookieParser = require('cookie-parser');
-	const sessions = require('express-session');
 	const favicon = require('serve-favicon');
 	const flash = require('express-flash');
 	const path = require('path');
@@ -30,21 +29,16 @@ module.exports = () => {
 	// let session: any;
 
 	app.use(cookieParser());
-	app.use(
-		sessions({
-			secret: config.sessionKey,
-			saveUninitialized: true,
-			cookie: {
-				maxAge: 24 * 60 * 60 * 1000,
-			},
-			resave: false,
-		})
-	);
+	app.use(config.session);
 
 	app.use(middleware.timeLog);
 
-	app.use('/regioes', require('./controllers/regioes.controller'));
-	app.use('/itens', require('./controllers/itens.controller'));
+	app.use('/ds1', require('./controllers/ds1.controller'));
+	app.use('/ds2', require('./controllers/ds2.controller'));
+	app.use('/user', require('./controllers/user.controller'));
+	app.use('/login', require('./controllers/login.controller'));
+	app.use('/register', require('./controllers/register.controller'));
+	app.use('/search', require('./controllers/search.controller'));
 
 	app.get('/', async (req: any, res: any) => {
 		res.render('./index', {
