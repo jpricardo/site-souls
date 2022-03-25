@@ -26,13 +26,11 @@
 			return mockResults;
 		};
 
-		res.send(
-			JSON.stringify({
-				key: searchTerm,
-				page: searchPage,
-				results: gerarMockResults(),
-			})
-		);
+		res.json({
+			key: searchTerm,
+			page: searchPage,
+			results: gerarMockResults(),
+		});
 	});
 
 	module.exports = router;
