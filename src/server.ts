@@ -33,11 +33,15 @@ module.exports = () => {
 
 	app.use(middleware.timeLog);
 
+	// Conteúdo
 	app.use('/ds1', require('./controllers/ds1.controller'));
 	app.use('/ds2', require('./controllers/ds2.controller'));
-	app.use('/user', require('./controllers/user.controller'));
+	app.use('/ds3', require('./controllers/ds3.controller'));
+	// Acesso
 	app.use('/login', require('./controllers/login.controller'));
 	app.use('/register', require('./controllers/register.controller'));
+	// Funcionalidades básicas
+	app.use('/user', require('./controllers/user.controller'));
 	app.use('/search', require('./controllers/search.controller'));
 
 	app.get('/', async (req: any, res: any) => {
