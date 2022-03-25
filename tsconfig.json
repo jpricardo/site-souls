@@ -9,6 +9,7 @@
     /* Modules */
     "module": "commonjs",                                /* Specify what module code is generated. */
     "moduleResolution": "node",
+    "rootDir": "src",
     "outDir": "dist",
 
     /* Interop Constraints */
