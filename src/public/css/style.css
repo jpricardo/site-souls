@@ -29,5 +29,5 @@ a:visited {
 }
 
 div[id="content"] {
-  height: calc(90vh)
+  min-height: calc(90vh)
 }
