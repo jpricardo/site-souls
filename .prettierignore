@@ -4,6 +4,7 @@
 *.jsx
 *.json
 *.md
+*.css
 
 package-lock.json
 
